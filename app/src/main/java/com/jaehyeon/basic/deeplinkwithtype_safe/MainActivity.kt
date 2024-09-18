@@ -44,7 +44,9 @@ class MainActivity : ComponentActivity() {
                         startDestination = HomeScreen
                     ) {
                         composable<HomeScreen> {
-                            HomeScreen()
+                            HomeScreen {
+                                navController.navigate(DeepLinkScreen(id = 19))
+                            }
                         }
 
                         composable<DeepLinkScreen>(
